@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Positivo ou Negativo</title>
+</head>
+<body>
+    <h2>Verificar se o número é positivo ou negativo</h2>
+    <form action="resultado.php" method="post">
+        <label for="numero">Digite um número:</label><br>
+        <input type="number" name="numero" id="numero" required><br><br>
+        <input type="submit" value="Verificar">
+    </form>
+</body>
+</html>
+<?php
+$numero = $_POST["numero"];
+if ($numero > 0) {
+    echo "O número $numero é POSITIVO.";
+} elseif ($numero < 0) {
+    echo "O número $numero é NEGATIVO.";
+} else {
+    echo "O número digitado é ZERO.";
+}
+?>
