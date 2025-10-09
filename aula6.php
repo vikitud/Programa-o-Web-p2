@@ -46,3 +46,36 @@
     echo "soma = " .soma(3,2);
     echo "<br>";
     echo "subtração"
+
+
+#função require()
+    <?php
+    include_once "funcoes.php";
+    include_once "funcoes.php"; // não vai dar erro pq é include_once
+    echo "soma = " .soma(3,2);
+    echo "<br>";
+    echo "subtração"
+    echo "subtração"
+    echo "subtração"
+
+
+#exercicio
+# Vamos criar um mini-projeto chamado MeuSite.com.
+#• Crie uma pasta chamada MeuSite dentro da pasta
+#htdocs do Xampp.
+#• Depois, crie 5 arquivos:
+#– index.php
+#– quemsomos.php
+#– clientes.php
+#– faleconosco.php
+#– principal.php
+#• Vamos criar a index.php para receber a estrutura de
+#cada página dentro de si. Ela terá o menu, topo e rodapé do
+#site.
+#• As demais páginas terão apenas o seu conteúdo.
+#• Em fale conosco, vamos criar um formulário que envie a
+#mensagem do visitante.
+#• Adicional: a página Index.php pode conter apenas Includes,
+#ou seja, crie arquivos como topo.php, menu.php, rodape.php
+#e apenas inclua através do include_once() dentro do arquivo
+#index
