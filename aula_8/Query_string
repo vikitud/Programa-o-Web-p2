@@ -99,3 +99,17 @@ segundo passo:
     )
     ");
 ?>
+
+exemplo3:
+
+<? 
+ $conexao = mysqli_connect("localhost", "root", "");
+
+    mysqli_select_db($conexao, "cadastro");
+
+    $ dados = mysqli_query("SELECT * FROM pessoas");
+
+    while($tabela = mysqli_fetch_array($dados)){
+        echo $tabela["id"]." - ".$tabela["nome"]."<br>";
+    }
+    ?>
