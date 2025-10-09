@@ -19,3 +19,83 @@ exemplo
 
         ?>
 
+Banco de dados:
+
+exemplo:
+
+<? 
+ $conexao = mysqli_connect("localhost", "root", ""_);
+    mysqli_select_db("cadastro", $conexao);
+        mysqli_query("
+        INSERT INTO pessoas
+        (nome)
+        VALUES
+        ('Victor Daniel')
+        ");
+        ?>
+
+conexões e consultas em SGBDs   
+
+bibibliotecas disponíveis:
+
+basicamente, o php oferece duas formas de se conectar a um SGBD: A Padrão e a PDO
+
+-> A padrão conecta de acordo com o BD que vc está usando (mysql, pgsql, etc)
+-> A PDO é uma forma mais genérica, que conecta a vários tipos de BD (mysql, pgsql, sqlite, etc)
+    -> A PDO é mais segura, mas um pouco mais complexa
+    -> A Padrão é mais simples, mas menos segura
+    -> A Padrão é mais rápida, mas menos flexível
+    -> A PDO é mais lenta, mas mais flexível
+    -> A Padrão é mais fácil de aprender, mas menos poderosa
+    -> A PDO é mais difícil de aprender, mas mais poderosa
+    -> A Padrão é mais usada, mas menos recomendada
+    -> A PDO é menos usada, mas mais recomendada
+    -> A Padrão é mais antiga, mas menos moderna
+    -> A PDO é mais nova, mas mais moderna
+ 
+    
+A função mysqli_connect() é utilizada na abertura de uma conexão MySQL;
+
+<?
+
+    $conexao = mysqli_connect("servidor", "login", "senha");
+    /* onde:
+    "servidor" é o endereço do servidor de banco de dados (geralmente "localhost" para servidores locais);
+    "login" é o nome de usuário do banco de dados;
+    "senha" é a senha do usuário do banco de dados.
+    */
+?>
+
+segundo passo:
+
+<?
+ $conexao = mysqli_connect("servidor", "login", "senha");
+
+    mysqli_select_db($conexao, "nome_da_base");
+
+    /* onde:
+    "nome_da_base" é o nome do banco de dados que você deseja selecionar para usar
+    */
+?>
+
+A função mysqli_query() é utilizada para executar uma consulta SQL no banco de dados conectado.
+
+exemplo:
+
+?>
+
+segundo passo:
+
+<?
+ $conexao = mysqli_connect("servidor", "login", "senha");
+
+    mysqli_select_db($conexao, "nome_da_base");
+
+    mysqli_query("
+    CREATE TABLE pessoas 
+    (
+        id int,
+        nome varchar(255)
+    )
+    ");
+?>
