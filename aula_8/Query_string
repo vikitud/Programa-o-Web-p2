@@ -107,7 +107,7 @@ exemplo3:
 
     mysqli_select_db($conexao, "cadastro");
 
-    $ dados = mysqli_query("SELECT * FROM pessoas");
+    $dados = mysqli_query("SELECT * FROM pessoas");
 
     while($tabela = mysqli_fetch_array($dados)){
         echo $tabela["id"]." - ".$tabela["nome"]."<br>";
@@ -115,3 +115,17 @@ exemplo3:
     ?>
 
     
+A função mysqli_close() encerrra a conexão MySQL;
+
+<?
+    $conexao = mysqli_connect("servidor", "login", "senha");
+    
+        mysqli_select_db($conexao, "nome_da_base");
+    
+        mysqli_query("SQL AQUI");
+    
+        mysqli_close($conexao);
+    /* onde:
+    "conexao" é a variável que contém a conexão aberta com o banco de dados.
+    */
+?>
