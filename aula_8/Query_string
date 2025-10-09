@@ -113,3 +113,5 @@ exemplo3:
         echo $tabela["id"]." - ".$tabela["nome"]."<br>";
     }
     ?>
+
+    
