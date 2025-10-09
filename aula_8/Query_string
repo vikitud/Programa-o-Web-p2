@@ -129,3 +129,22 @@ A função mysqli_close() encerrra a conexão MySQL;
     "conexao" é a variável que contém a conexão aberta com o banco de dados.
     */
 ?>
+
+exemplo:
+
+<? 
+ $conexao = mysqli_connect("localhost", "root", "");
+
+    mysqli_select_db($conexao, "cadastro");
+
+    mysqli_query("
+    CREATE TABLE pessoas 
+    (
+        id int,
+        nome varchar(255)
+    )
+    ");
+    mysqli_close($conexao);
+    ?>
+
+    
