@@ -13,5 +13,13 @@
 
 <?php echo $dados['id'];?><br>
 <?= $dados['nome'];?><br>
-<?php echo $dados['email'];?><br>
-<?php echo $dados['telefone'];?><br>
+<?php echo $dados['cidade'];?><br>
+<?php echo $dados['estado'];?><br>
+
+<?php
+    } else {
+        echo "Nenhum cliente encontrado.";
+    }
+
+    ?>
+
