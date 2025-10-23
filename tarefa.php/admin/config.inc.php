@@ -4,9 +4,7 @@
 
     $bd = mysqli_select_db($conexao, "projeto1");
 
-    if((!$conexao) && (!$bd)){
-        
-    }else{
+    if(!$conexao){
         echo"Conexão realizada com banco de dados falhou!";
     }
 
